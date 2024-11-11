@@ -1,0 +1,312 @@
+ <html>
+<head>
+  <title>Birthday Card</title>
+  <style>
+    body {
+      background-image: url('https://i.imgur.com/NGjmzVl.jpeg');
+background-repeat: no-repeat;
+animation: fadeIn 0s ease-in-out;
+      
+      background-size: cover;
+      height: 2000px;
+      
+    }
+
+    .date {
+      font-family: arial;
+      font-weight: bold;
+      margin-left: 380px;
+      font-size: 40px;
+      margin-top: 0px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .ph1 {
+      margin-top: 0px;
+      width: 1000px;
+      margin-left: -5px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .ph2 {
+      width: 1000px;
+      margin-left: -3px;
+      margin-top: 0px;
+      height: 1500px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+      padding: 30px;
+      gap: 30px;
+      max-width: 100%;
+    }
+
+    .product-card {
+      flex: 0 0 auto;
+      width: 450px;
+      height: 580px;
+      text-align: center;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      font-family: arial;
+      font-size: 20px;
+      color: black;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 550px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .quote {
+      margin-left: 150px;
+      font-family: italic;
+      font-weight: bold;
+      margin-top: 80px;
+      font-size: 100px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .lettr {
+      font-family: arial;
+      font-size: 45px;
+      margin-left: 50px;
+      animation: fadeIn 1s ease-in-out;
+      margin-top: 30px;
+      
+      
+    }
+
+    .ph3 {
+      height: 600px;
+      width: 600px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      margin-left: 210px;
+      animation: fadeIn 1s ease-in-out;
+      border-radius: 300px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .arrow {
+      font-size: 80px;
+      margin-bottom: 40px;
+      font-family: arial;
+      margin-top: 80px;
+    }
+
+    .end {
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 450px;
+      font-size: 30px;
+      margin-top: 60px;
+      margin-bottom: 0px;
+    }
+
+    .scroll {
+      font-family: arial;
+      margin-left: 400px;
+      font-size: 35px;
+      color: black;
+      margin-bottom: 20px;
+      
+    }
+
+    .scrolll {
+      font-family: arial;
+      margin-left: 460px;
+      font-size: 40px;
+      font-weight: bold;
+      color: deeppink;
+      
+      
+    }
+
+    .cake {
+      font-size: 45px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center content on page */
+    
+
+    /* Card styling */
+    .card {
+      width: 800px;
+      height: 650px;
+      perspective: 1000px;
+      margin-bottom:50px;
+      margin-top: 30px;
+      margin-left: 100px;
+animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Inner container for the 3D rotation */
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Card faces */
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      color: black;
+      font-size: 40px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-front {
+      background: skyblue;
+    }
+
+    .card-back {
+      background: skyblue;
+      transform: rotateY(180deg);
+      font-family: arial;
+      font-weight: bold;
+      
+    }
+
+    /* Flip button */
+    .flip-button {
+      margin-top: 90px;
+      padding: 20px 80px;
+      font-size: 1em;
+      font-family: arial;
+      font-weight: bold;
+      font-size: 30px;
+      color: #ff7e5f;
+      background-color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .flip-button:hover {
+      background-color: #ff7e5f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img class="ph3" src="https://i.imgur.com/5cHkeSp.jpeg" alt="ph3">
+  </div>
+  <div>
+    <h3 class="scrolll">Open &#9759;</h3>
+  </div>
+
+  <div class="card">
+    <div class="card-inner" id="birthdayCard">
+      <div class="card-front">
+        <h2>🎉 Happy Birthday! 🎉</h2>
+        <button class="flip-button" onclick="flipCard()">Open</button>
+      </div>
+      <div class="card-back">
+        <h3 class="lettr">
+𝘏𝘢𝘱𝘱𝘺 𝘉𝘪𝘳𝘵𝘩𝘥𝘢𝘺, 𝘚𝘦𝘤𝘩𝘪..🫂💖, 𝘐 𝘸𝘢𝘯𝘵𝘦𝘥 𝘵𝘰 𝘨𝘦𝘵 𝘺𝘰𝘶 𝘴𝘰𝘮𝘦𝘵𝘩𝘪𝘯𝘨 𝘢𝘮𝘢𝘻𝘪𝘯𝘨, 𝘣𝘶𝘵 𝘵𝘩𝘦𝘯 𝘐 𝘳𝘦𝘮𝘦𝘮𝘣𝘦𝘳𝘦𝘥 𝘺𝘰𝘶 𝘢𝘭𝘳𝘦𝘢𝘥𝘺 𝘩𝘢𝘷𝘦 𝘮𝘦🤩✨, 𝘴𝘰 𝘺𝘰𝘶’𝘳𝘦 𝘰𝘯𝘦 𝘭𝘶𝘤𝘬𝘺 𝘱𝘦𝘳𝘴𝘰𝘯 𝘵𝘰 𝘩𝘢𝘷𝘦 𝘢 𝘱𝘳𝘦𝘤𝘪𝘰𝘶𝘴 𝘧𝘳𝘪𝘦𝘯𝘥 𝘭𝘪𝘬𝘦 𝘮𝘦😁🫂
+        </h3>
+        <p class="cake">🎂 🎈 🎁</p>
+        <button class="flip-button" onclick="flipCard()">back</button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="scroll">Scroll down &#9759;</h3>
+  </div>
+
+  <div>
+    <img class="ph1" src="https://i.imgur.com/WV9ocGR.jpeg" alt="asthetic">
+  </div>
+
+  <div>
+    <img class="ph1" src="https://i.imgur.com/HN0w8Sl.jpeg" alt="photo">
+  </div>
+  
+  <div>
+    <h4 class="date">Nov.15.2024</h4>
+  </div>
+  <div>
+    <h2 class="quote">
+      “To the one who holds my heart, happy birthday Sechi 🫂💖”
+    </h2>
+  </div>
+  <div class="arrow">
+    <h5>Scroll &#10142;</h5>
+  </div>
+
+  <div class="scroll-container" id="scroll-container">
+    <div class="product-card">
+      <img src="https://i.imgur.com/qT2M4jt.jpeg" alt="Product 1">
+    </div>
+    <div class="product-card">
+      <img src="https://i.imgur.com/FBMYerR.jpeg" alt="Product 2">
+    </div>
+    <div class="product-card">
+      <img src="https://i.imgur.com/s5haz9Z.jpeg" alt="Product 3">
+    </div>
+    <div class="product-card">
+      <img src="https://i.imgur.com/tQ8oYbP.jpeg" alt="Product 4">
+    </div>
+  </div>
+
+  <div>
+    <h1 class="end">.end.</h1>
+  </div>
+
+  <script>
+    let isFlipped = false;
+
+    function flipCard() {
+      const card = document.getElementById("birthdayCard");
+
+      if (isFlipped) {
+        card.style.transform = "rotateY(0deg)";
+      } else {
+        card.style.transform = "rotateY(180deg)";
+      }
+
+      isFlipped = !isFlipped;
+    }
+  </script>
+</body>
+</html>
